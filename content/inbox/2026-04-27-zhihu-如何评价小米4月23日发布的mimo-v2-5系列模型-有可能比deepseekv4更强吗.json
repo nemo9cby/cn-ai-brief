@@ -1,0 +1,26 @@
+{
+  "id": "2026-04-27-zhihu-如何评价小米4月23日发布的mimo-v2-5系列模型-有可能比deepseekv4更强吗",
+  "date": "2026-04-27",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "如何评价小米4月23日发布的MiMo-V2.5系列模型，有可能比DeepSeekV4更强吗？",
+  "original_url": "https://www.zhihu.com/question/2030445160417510538",
+  "heat": "102 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "agents",
+    "models",
+    "infra"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "高赞回答普遍认为，MiMo-V2.5-Pro 在部分 benchmark 和 token 效率上略优于 DeepSeek-V4-Pro，尤其强调“更省 token、Agent 更能干活”。",
+      "也有一条明显的保留意见，高赞答主拿真实代码审查举例，认为两者都还没追上 GPT / Claude，在隐蔽 bug、长链自主推理上仍有差距。",
+      "整体舆论不是“谁彻底碾压谁”，而是把它看成国产模型从底座智力竞争，转向 agent 执行力、成本效率、落地能力的分化。"
+    ],
+    "why_it_matters": "这是中文 AI 圈对“国产模型 next leg 在哪”的一线情绪，重点不再只是榜单分数，而是 agent 化、成本、工程可用性。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

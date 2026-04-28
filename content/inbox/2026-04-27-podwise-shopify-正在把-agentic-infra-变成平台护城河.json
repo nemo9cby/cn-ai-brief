@@ -1,0 +1,20 @@
+{
+  "id": "2026-04-27-podwise-shopify-正在把-agentic-infra-变成平台护城河",
+  "date": "2026-04-27",
+  "source": "Podwise / Latent Space: The AI Engineer Podcast",
+  "status": "draft",
+  "title": "Shopify 正在把 agentic infra 变成平台护城河",
+  "episode": "Shopify’s AI Phase Transition: 2026 Usage Explosion, Unlimited Opus-4.6 Token Budget, Tangle, Tangent, SimGym — with Mikhail Parakhin, Shopify CTO",
+  "original_url": "",
+  "original_language": "en",
+  "tags": [
+    "agents",
+    "models",
+    "infra"
+  ],
+  "chinese_notes": {
+    "signal": "unlimited frontier token budget、auto-research loop、customer simulation、content-based caching 被系统化落地。",
+    "why_it_matters": "说明大厂竞争点正在从“接入模型”转向“把 agent + data + infra 变成可复用操作系统”。"
+  },
+  "public_card_todo": "Turn this into an English card only if the underlying episode/source is useful for cross-border AI readers."
+}

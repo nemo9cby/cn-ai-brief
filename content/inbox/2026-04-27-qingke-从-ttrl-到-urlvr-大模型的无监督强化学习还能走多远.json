@@ -1,0 +1,19 @@
+{
+  "id": "2026-04-27-qingke-从-ttrl-到-urlvr-大模型的无监督强化学习还能走多远",
+  "date": "2026-04-27",
+  "source": "Qingke AI",
+  "status": "seen-before",
+  "title": "从 TTRL 到 URLVR：大模型的无监督强化学习还能走多远？",
+  "original_url": "https://qingkeai.online/archives/urlvr-talk",
+  "original_language": "zh-CN",
+  "tags": [
+    "post-training",
+    "agents",
+    "models",
+    "infra"
+  ],
+  "chinese_notes": {
+    "assessment": "no newly published Qingke archive post is visible today in Nemo’s priority lanes, including LLM training, post-training, SFT / RL / GRPO, model evaluation, coding agents, AI infra, or especially strong original Chinese AI discourse in those areas."
+  },
+  "public_card_todo": "If resurfacing this item, summarize the technical idea and connect it to English AI discourse."
+}

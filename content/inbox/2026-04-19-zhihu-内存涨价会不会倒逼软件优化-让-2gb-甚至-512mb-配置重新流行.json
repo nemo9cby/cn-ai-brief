@@ -1,0 +1,24 @@
+{
+  "id": "2026-04-19-zhihu-内存涨价会不会倒逼软件优化-让-2gb-甚至-512mb-配置重新流行",
+  "date": "2026-04-19",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "内存涨价会不会倒逼软件优化，让 2GB 甚至 512MB 配置重新流行？",
+  "original_url": "https://www.zhihu.com/question/2018673868974370892",
+  "heat": "115 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "infra"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "高赞答案的主流判断是，不会回到超低配置时代，软件膨胀有结构性原因，硬件底座和图形、浏览器、多进程架构已经变了。",
+      "但不少人承认，企业端和高成本推理场景一直在做优化，涨价最多会推动“让 64G 跑 48G 的活”，而不是让 2G 机器复活。",
+      "讨论里隐含的真实焦点是 HBM/内存供给紧张如何向 AI、服务器、终端价格传导，而不是 nostalgia 式的“极致小而美”。"
+    ],
+    "why_it_matters": "这是一个偏弱但可用的产业情绪信号，反映中文舆论开始把存储/内存价格与 AI 时代的硬件资源挤占联系起来。",
+    "priority": "low",
+    "fit": "context-only"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

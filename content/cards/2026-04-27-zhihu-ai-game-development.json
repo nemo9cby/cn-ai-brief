@@ -1,0 +1,18 @@
+{
+  "date": "2026-04-27",
+  "source": "Zhihu",
+  "title": "Chinese indie builders are converging on a pragmatic view of AI coding agents",
+  "original_title": "我没有编程能力，现在写了完整的游戏设计文稿，并准备了20万资金，想把游戏用AI做出来，该怎么做？",
+  "original_url": "https://www.zhihu.com/question/2030297015276549260",
+  "original_language": "zh-CN",
+  "tags": ["agents", "operators", "product"],
+  "summary": "A popular Zhihu thread asked whether a non-programmer with a complete game design document and a budget of about RMB 200,000 could build the game with AI. The strongest answers were surprisingly pragmatic: AI can accelerate a demo, but it does not replace a lead engineer for architecture, review, debugging, and long-term maintenance. Several commenters recommended spending first on top coding-agent subscriptions and occasional senior engineering review, then using the remaining budget for art outsourcing or a playable prototype.",
+  "key_ideas": [
+    "The mainstream advice was not anti-AI, but anti-delusion: use AI to reach a demo, not to skip engineering ownership.",
+    "A credible path is prototype-first: use Godot or a small stack, build a playable slice, then decide whether to hire.",
+    "Human architecture, code review, and scope control remain the bottleneck for larger projects.",
+    "This is a more grounded version of the global vibe-coding debate."
+  ],
+  "why_english_readers_should_care": "The English AI discourse often swings between 'everyone can build apps now' and 'AI coding is overhyped'. This Chinese discussion is more useful because it turns the question into budget allocation and execution strategy. It captures how non-technical founders may actually use coding agents: not as a full replacement for engineers, but as leverage for prototyping and narrowing uncertainty.",
+  "short_translated_excerpt": "AI can speed up a demo, but it cannot be the lead engineer for a serious project."
+}

@@ -1,0 +1,25 @@
+{
+  "id": "2026-04-27-zhihu-我没有编程能力-现在写了完整的游戏设计文稿-并准备了20万资金-想把游戏用ai做出来-该怎么做",
+  "date": "2026-04-27",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "我没有编程能力，现在写了完整的游戏设计文稿，并准备了20万资金，想把游戏用AI做出来，该怎么做？",
+  "original_url": "https://www.zhihu.com/question/2030297015276549260",
+  "heat": "127 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "agents",
+    "operators"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "最高赞一派非常谨慎，核心判断是“AI 能加速 demo，但替代不了主程”，大项目仍需要人类架构、审查和持续纠错。",
+      "更务实的建议是，把预算先花在 code model 订阅和少量资深程序顾问上，再把钱留给美术外包，不要一上来重资产组团队。",
+      "也有少数高赞意见明显更激进，主张直接买顶配 AI coding 工具，先用 Godot 做 demo，先跑出可玩样机再决定要不要雇人。"
+    ],
+    "why_it_matters": "这比“AI 会不会替代程序员”的空泛讨论更具体，反映中文开发者与准创业者对 coding agent 的真实边界判断。",
+    "priority": "medium",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

@@ -1,0 +1,25 @@
+{
+  "id": "2026-04-24-zhihu-deepseek-v4-预览版本上线并同步开源-哪些亮点值得关注",
+  "date": "2026-04-24",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "DeepSeek V4 预览版本上线并同步开源，哪些亮点值得关注？",
+  "original_url": "https://www.zhihu.com/question/2030963929510310856",
+  "heat": "3800 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "agents",
+    "models"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "高赞回答集中强调两点：Pro/Flash 双线同时放出，且 Base + Instruct 一次性开源，MIT 协议，给开发者可直接上手的完整包。",
+      "1M context 被视为这次最硬的参数升级之一，讨论里反复把它当成工程可用性的分水岭。",
+      "编程能力是知乎技术圈最看重的观察点，高赞答主认为 V4 Pro 基本拿回了“国模编程冠军”位置，和 Anthropic 顶级模型的差距明显缩小。"
+    ],
+    "why_it_matters": "这不是泛热榜式“国产模型又发了”，而是中文技术社区在认真比较 open weights、长上下文、代码能力和 agent 工况，说明舆论关注点已经从情绪支持转向工程可用性。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "2026-04-27-zhihu-南方多省电价突然飙升-广东-4-月多次逼近-1-元-度-为什么会这样-还会上涨吗",
+  "date": "2026-04-27",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "南方多省电价突然飙升，广东 4 月多次逼近 1 元/度，为什么会这样？还会上涨吗？",
+  "original_url": "https://www.zhihu.com/question/2031703358826705575",
+  "heat": "78 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "infra"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "最高赞回答把这轮波动解释为电力现货市场化的必然结果，强调“负电价”和“高电价”以后都会更常见，关键不是居民电费，而是市场化电价将更强地向商业端传导。",
+      "专业背景答主把链条拆得更细：霍尔木兹海峡风险抬升 LNG 成本，广东又在高温、检修、来水偏弱时把燃气机组推成边际机组，于是最贵电源决定了全市场价格。",
+      "舆论里一个很清晰的共识是，这不只是单次涨价，而是中国电力定价机制、能源结构和地缘输入风险的压力测试。"
+    ],
+    "why_it_matters": "它把地缘风险、能源进口、市场设计、工业成本这几条线拉到了一起，信息密度很高。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "2026-04-27-podwise-多-agent-协作正在从-demo-变成组织问题",
+  "date": "2026-04-27",
+  "source": "Podwise / 42章经",
+  "status": "draft",
+  "title": "多 Agent 协作正在从 demo 变成组织问题",
+  "episode": "用 Agent 动力学，和 40 个 Agents 一起为「人 + AI」做产品｜对谈 Slock.ai 创始人 RC",
+  "original_url": "",
+  "original_language": "zh-CN or mixed",
+  "tags": [
+    "agents",
+    "models",
+    "operators"
+  ],
+  "chinese_notes": {
+    "signal": "CLI 面向 Agent、Builder/Coder 解耦、任务认领与共享记忆等组织机制开始出现。",
+    "why_it_matters": "下一阶段的瓶颈不只是模型能力，而是怎样管理 Agent 团队的分工、记忆和冲突。"
+  },
+  "public_card_todo": "Turn this into an English card only if the underlying episode/source is useful for cross-border AI readers."
+}

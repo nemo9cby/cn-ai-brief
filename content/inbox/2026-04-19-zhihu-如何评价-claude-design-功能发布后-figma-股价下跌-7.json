@@ -1,0 +1,26 @@
+{
+  "id": "2026-04-19-zhihu-如何评价-claude-design-功能发布后-figma-股价下跌-7",
+  "date": "2026-04-19",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "如何评价 claude design 功能发布后 Figma 股价下跌 7%？",
+  "original_url": "https://www.zhihu.com/question/2028695048301102521",
+  "heat": "96 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "infra",
+    "operators",
+    "markets"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "最有代表性的看法是，市场先交易预期，Figma 真正受威胁的不是今天的存量用户，而是未来新增用户和更高估值倍数。",
+      "有体验派回答认为 Claude Design 对非设计师做 prototype、动画、slides 的门槛下降很明显，但 token/订阅成本仍高，离成熟生产工具还有距离。",
+      "也有怀疑派认为这类能力更像“会生成的 demo 工具”，很难替代 Figma 那种协作、规范、生态一体化的工业链条。"
+    ],
+    "why_it_matters": "这条讨论说明中文用户对北美 AI 产品发布的观察角度已经很资本市场化，也很产品经理化，既看 demo，也看 workflow 替代深度。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

@@ -1,0 +1,26 @@
+{
+  "id": "2026-04-23-zhihu-腾讯混元-hy3-preview-发布-已接入元宝-实际能力如何",
+  "date": "2026-04-23",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "腾讯混元 Hy3 preview 发布，已接入元宝，实际能力如何",
+  "original_url": "https://www.zhihu.com/question/2030703202702549014",
+  "heat": "138 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "models",
+    "infra",
+    "operators"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "代表性看法是，这次更像“重建底座”而不是小修小补，关注点落在预训练、RL、工具调用、多步推理这些基础能力，而不只是榜单分数。",
+      "不少回答把 Hy3 放进国内模型军备竞赛里看，认为腾讯终于追上主流梯队，说明中国大厂之间的模型差距在快速收敛。",
+      "也有鲜明观点说，大模型已经很难靠单一技术形成长期护城河，接下来拼的是产品留存、场景落地和价格战。"
+    ],
+    "why_it_matters": "这是中文舆论对“国产大模型第二梯队追赶”最直接的反馈，重点不是发布会本身，而是行业情绪从仰视国外 SOTA 转向比较谁更快把模型变成产品能力。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

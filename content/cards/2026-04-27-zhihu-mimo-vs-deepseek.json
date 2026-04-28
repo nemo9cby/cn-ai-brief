@@ -1,0 +1,18 @@
+{
+  "date": "2026-04-27",
+  "source": "Zhihu",
+  "title": "Chinese AI users are judging MiMo and DeepSeek by agent usefulness, not just benchmark scores",
+  "original_title": "如何评价小米4月23日发布的MiMo-V2.5系列模型，有可能比DeepSeekV4更强吗？",
+  "original_url": "https://www.zhihu.com/question/2030445160417510538",
+  "original_language": "zh-CN",
+  "tags": ["models", "agents", "infra"],
+  "summary": "A highly viewed Zhihu discussion around Xiaomi's MiMo-V2.5 compared it with DeepSeek-V4 through a practical lens: token efficiency, agent task completion, and real coding reliability. Many commenters saw MiMo as competitive on selected benchmarks and more efficient in some agent-like workflows, while more skeptical answers argued that both Chinese models still lag GPT and Claude on hidden bugs and long-horizon reasoning. The striking part is the evaluation frame itself: Chinese AI users are moving from model-score debates toward workflow usefulness, cost, and whether a model can actually do work inside agent systems.",
+  "key_ideas": [
+    "The local debate is less about a clean winner and more about what counts as real model usefulness.",
+    "Token efficiency and agent task performance are becoming first-class comparison criteria.",
+    "Skeptical users still benchmark Chinese models against GPT and Claude when the task requires long-chain reasoning or subtle code review.",
+    "The Chinese model conversation is shifting toward execution, cost, and engineering usability."
+  ],
+  "why_english_readers_should_care": "English AI Twitter often sees Chinese labs through benchmark screenshots or model-release headlines. This discussion shows how Chinese practitioners are developing a more operational evaluation culture: can the model run cheaper, act longer, and survive real coding workflows? That is a better signal than leaderboard movement alone.",
+  "short_translated_excerpt": "The debate is no longer simply 'who scores higher', but which model is cheaper in tokens, more useful as an agent, and more deployable in real workflows."
+}

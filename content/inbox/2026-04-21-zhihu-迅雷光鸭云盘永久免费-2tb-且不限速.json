@@ -1,0 +1,24 @@
+{
+  "id": "2026-04-21-zhihu-迅雷光鸭云盘永久免费-2tb-且不限速",
+  "date": "2026-04-21",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "迅雷光鸭云盘永久免费 2TB 且不限速",
+  "original_url": "https://www.zhihu.com/question/2029107688429109449",
+  "heat": "94 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "markets"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "代表性高赞反应几乎一边倒地怀疑“永久免费 + 不限速”的可持续性，用户把它视为典型获客补贴而非长期商业模式。",
+      "很多回答直接拿阿里云盘、网易邮箱、曲奇云盘等历史案例做参照，形成一种很强的“先烧钱、后变现、再收缩权益”的集体记忆。",
+      "讨论里还出现一个有意思的信号，用户会立即把它放进更大的云盘生态比较，关注资源生态、审查强度、后续收费和数据安全，而不只看容量数字。"
+    ],
+    "why_it_matters": "虽然不算头部硬新闻，但它能补充中国互联网用户对“免费 SaaS / 云存储承诺”的极深不信任，这种情绪对科技平台竞争很有参考价值。",
+    "priority": "low",
+    "fit": "context-only"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

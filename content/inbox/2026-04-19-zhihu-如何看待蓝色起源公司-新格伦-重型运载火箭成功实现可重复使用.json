@@ -1,0 +1,24 @@
+{
+  "id": "2026-04-19-zhihu-如何看待蓝色起源公司-新格伦-重型运载火箭成功实现可重复使用",
+  "date": "2026-04-19",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "如何看待蓝色起源公司「新格伦」重型运载火箭成功实现可重复使用？",
+  "original_url": "https://www.zhihu.com/question/2029283305942459114",
+  "heat": "218 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "infra"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "高赞回答普遍把这次定义为“成功回收”走向“成功复用”的关键节点，认为只有二次飞行+再次回收，才算真正跨过可重复使用门槛。",
+      "另一类观点强调别被庆祝冲昏头，一级复用成功不等于系统成熟，二级入轨偏差、整体任务可靠性、发射频率和成本曲线，才决定能否挑战 SpaceX。",
+      "共识是，第二家重型可复用玩家出现，意味着商业航天客户议价空间和发射市场结构都会变化。"
+    ],
+    "why_it_matters": "中文讨论没有停留在“贝索斯追上马斯克”的吃瓜层面，而是在看可复用技术是否开始从单点验证进入产业化竞争。",
+    "priority": "medium",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

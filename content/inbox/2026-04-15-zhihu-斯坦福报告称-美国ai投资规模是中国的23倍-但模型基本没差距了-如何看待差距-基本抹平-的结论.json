@@ -1,0 +1,26 @@
+{
+  "id": "2026-04-15-zhihu-斯坦福报告称-美国ai投资规模是中国的23倍-但模型基本没差距了-如何看待差距-基本抹平-的结论",
+  "date": "2026-04-15",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "斯坦福报告称「美国AI投资规模是中国的23倍，但模型基本没差距了」，如何看待差距「基本抹平」的结论？",
+  "original_url": "https://www.zhihu.com/question/2027689506711630551",
+  "heat": "124 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "models",
+    "infra",
+    "markets"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "高赞回答普遍不否认美国在资本、数据中心、人才和底层硬件上的优势，但认为“23 倍投资”并不等于 23 倍有效投入，统计口径、基础设施泡沫和成本结构都在放大表面差距。",
+      "最常见的判断是，中美顶层模型已进入“缠斗”阶段，短期胜负更多取决于工程效率、架构优化和开源吸收能力，不再只是单纯拼烧钱。",
+      "也有高赞回答提醒，模型分数接近不代表全链条差距消失，底层芯片、EDA、算力基础设施和制度环境仍然是美国真正的护城河。"
+    ],
+    "why_it_matters": "这是今天知乎里最像“产业舆论温度计”的 AI 话题。它补充了中文技术圈对斯坦福 AI Index 的接受方式：既有民族自信，也有对底层差距仍在的现实判断，不是单向亢奋。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

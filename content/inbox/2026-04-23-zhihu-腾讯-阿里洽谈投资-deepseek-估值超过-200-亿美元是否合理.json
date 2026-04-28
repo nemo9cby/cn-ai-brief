@@ -1,0 +1,26 @@
+{
+  "id": "2026-04-23-zhihu-腾讯-阿里洽谈投资-deepseek-估值超过-200-亿美元是否合理",
+  "date": "2026-04-23",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "腾讯、阿里洽谈投资 DeepSeek，估值超过 200 亿美元是否合理",
+  "original_url": "https://www.zhihu.com/question/2030589948001084304",
+  "heat": "138 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "models",
+    "operators",
+    "markets"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "高赞观点集中认为，200 亿美元不是偏高，反而像“压价锚”，理由是拿港股 MiniMax、智谱作参照，DeepSeek 的技术影响力和行业位置更强。",
+      "另一条高赞线索是，舆论对消息源 The Information 的可信度明显存疑，知乎用户把连续改口的估值爆料视为资本试探市场情绪。",
+      "还有一类讨论把融资和人才竞争、股权激励、芯片与商业化资源绑定在一起，认为 DeepSeek 未必缺现金，更缺生态通道和组织稳定性。"
+    ],
+    "why_it_matters": "这不是泛融资八卦，核心是中文舆论把 DeepSeek 视为中国 AI 资产定价的锚点，关注点已经从“能不能做模型”转到“谁来绑定下一代基础模型入口”。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

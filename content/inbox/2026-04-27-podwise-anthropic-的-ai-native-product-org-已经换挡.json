@@ -1,0 +1,21 @@
+{
+  "id": "2026-04-27-podwise-anthropic-的-ai-native-product-org-已经换挡",
+  "date": "2026-04-27",
+  "source": "Podwise / Lenny's Podcast: Product | Career | Growth",
+  "status": "draft",
+  "title": "Anthropic 的 AI-native product org 已经换挡",
+  "episode": "How Anthropic’s product team moves faster than anyone else | Cat Wu (Head of Product, Claude Code)",
+  "original_url": "",
+  "original_language": "en",
+  "tags": [
+    "post-training",
+    "agents",
+    "models",
+    "operators"
+  ],
+  "chinese_notes": {
+    "signal": "weekly shipping、产品 taste 优先、小规模高质量 eval 替代厚 PRD、工程/产品边界继续消失。",
+    "why_it_matters": "这不是单点 workflow 优化，而是产品组织模型在被 frontier model 反向改写。"
+  },
+  "public_card_todo": "Turn this into an English card only if the underlying episode/source is useful for cross-border AI readers."
+}

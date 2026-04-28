@@ -1,0 +1,11 @@
+{
+  "name": "cn-ai-brief",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "ingest": "node scripts/ingest-newsroom.mjs",
+    "build": "node scripts/build-site.mjs",
+    "dev": "npm run ingest && npm run build"
+  }
+}

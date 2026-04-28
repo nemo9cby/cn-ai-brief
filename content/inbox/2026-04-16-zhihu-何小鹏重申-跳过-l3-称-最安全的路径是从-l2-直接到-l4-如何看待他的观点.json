@@ -1,0 +1,24 @@
+{
+  "id": "2026-04-16-zhihu-何小鹏重申-跳过-l3-称-最安全的路径是从-l2-直接到-l4-如何看待他的观点",
+  "date": "2026-04-16",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "何小鹏重申「跳过 L3 」，称「最安全的路径是从 L2 直接到 L4 」，如何看待他的观点？",
+  "original_url": "https://www.zhihu.com/question/2027873840957531579",
+  "heat": "90 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "infra"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "支持者认为，端到端路线已经改变了自动驾驶范式，L3 那种“系统提醒后人类接管”的责任切分越来越别扭，技术上和法律上都不优雅。",
+      "较高赞的谨慎派观点则指出，L3 最大问题是事故瞬间责任归属模糊，车企和用户之间会出现大量扯皮，所以“跳过 L3”首先是风险管理，不只是技术宣言。",
+      "还有回答把这件事和小鹏自研 AI 芯片、算力投入绑定起来看，认为它是在为更重的端到端智驾叙事铺路。"
+    ],
+    "why_it_matters": "这反映出中国讨论自动驾驶时，焦点正在从功能炫技转向责任划分、监管闭环、芯片投入回报，语气比单纯发布会宣传更冷静。",
+    "priority": "medium",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "2026-04-17-zhihu-我国自主研发-无人飞行卡车-hh-200-首飞成功",
+  "date": "2026-04-17",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "我国自主研发“无人飞行卡车” HH-200 首飞成功",
+  "original_url": "https://www.zhihu.com/question/2027688092937593761",
+  "heat": "59 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "models",
+    "infra"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "一类观点关注商业可行性，盯着 1.5 吨载重、跨岛和支线货运场景，讨论低空物流是否能跑通成本模型。",
+      "更高赞的技术向观点虽然带有强烈军民两用解读，但核心判断是，这类平台的意义在于大载荷、长航时、自主飞行平台正在走向实际部署，而不再停留在展示层面。"
+    ],
+    "why_it_matters": "这条讨论体现了中文舆论对无人运输平台的典型读取方式，既看产业应用，也天然会联想到供应链韧性、边境运输和军民两用能力。",
+    "priority": "low",
+    "fit": "cn"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

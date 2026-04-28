@@ -1,0 +1,25 @@
+{
+  "id": "2026-04-18-zhihu-雷军称未来几年不会推-10-万内车型-智能化成本难控制在-10-万以内-如何看待该表态及背后商业逻辑",
+  "date": "2026-04-18",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "雷军称未来几年不会推 10 万内车型，智能化成本难控制在 10 万以内，如何看待该表态及背后商业逻辑？",
+  "original_url": "https://www.zhihu.com/question/2028458533151142348",
+  "heat": "296 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "infra",
+    "operators"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "高赞观点认为，10 万价位本身就是成熟主机厂拼供应链效率和极限成本控制的战场，小米现阶段没有成本优势，硬进只会压缩利润甚至伤品牌。",
+      "另一类观点把它类比为苹果当年拒做低价上网本，本质是品牌和产品体验不愿为了价格带大幅降级。",
+      "也有声音认为，小米短期更适合做高配置、精品化车型，等规模和采购优势起来再谈下探。"
+    ],
+    "why_it_matters": "这不是单纯车圈讨论，更像中国舆论对“智能硬件溢价是否可持续”的一次现实校准。大家默认智能化、辅助驾驶、软件能力都在推高 BOM，低价智能车的故事没那么好讲。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

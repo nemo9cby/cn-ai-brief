@@ -1,0 +1,21 @@
+{
+  "id": "2026-04-26-zhihu-deepseek-v4全面支持百万上下文-token-这意味着什么-到底有多厉害",
+  "date": "2026-04-26",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "DeepSeek v4全面支持百万上下文 token，这意味着什么？到底有多厉害？",
+  "original_url": "https://www.zhihu.com/question/2031047018336839206",
+  "heat": "59 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "models",
+    "infra"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [],
+    "why_it_matters": "这是中文舆论对中国开源模型竞争的典型态度，一边承认 DeepSeek 把价格和能力门槛往下压，一边对“宣传数字”保持强烈怀疑。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

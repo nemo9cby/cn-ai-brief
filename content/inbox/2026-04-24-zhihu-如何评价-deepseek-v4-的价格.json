@@ -1,0 +1,25 @@
+{
+  "id": "2026-04-24-zhihu-如何评价-deepseek-v4-的价格",
+  "date": "2026-04-24",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "如何评价 DeepSeek-V4 的价格？",
+  "original_url": "https://www.zhihu.com/question/2030963912749924411",
+  "heat": "544 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "models",
+    "infra"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "高赞观点认为，V4 虽然比部分国产竞品贵，但相对 Claude / OpenAI 旗舰档仍是“便宜很多”，价格讨论是按 token 成本直接对标北美头部模型展开的。",
+      "讨论里很强的一条线是“价格暂时受高端算力约束”，不少回答把后续降价预期和昇腾/国产算力供给改善绑定在一起。",
+      "也有一类高赞使用者反馈，记忆广度和角色一致性表现非常强，意思是知乎用户并不只盯 benchmark，而是在看真实使用性价比。"
+    ],
+    "why_it_matters": "这条信号补的是中文市场对模型价格战的体感。知乎用户默认把模型当商品和生产力工具在比较，讨论框架很接近 SaaS/infra 成本竞争，而不是单纯民族叙事。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

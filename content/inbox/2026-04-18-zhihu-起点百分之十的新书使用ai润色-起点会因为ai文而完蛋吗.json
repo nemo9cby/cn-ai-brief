@@ -1,0 +1,22 @@
+{
+  "id": "2026-04-18-zhihu-起点百分之十的新书使用ai润色-起点会因为ai文而完蛋吗",
+  "date": "2026-04-18",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "起点百分之十的新书使用AI润色，起点会因为AI文而完蛋吗？",
+  "original_url": "https://www.zhihu.com/question/2028416884643472906",
+  "heat": "149 万热度",
+  "original_language": "zh-CN",
+  "tags": [],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "一派观点认为，AI 润色只是工具，核心判断仍是内容是否好看，若作者能把工具用得隐蔽且有效，读者并不会天然排斥。",
+      "另一派更担心平台内容同质化，认为问题不在 AI 本身，而在 AI 会进一步放大网文模板化、八股化趋势。",
+      "还有较受认同的看法是，实际使用比例可能高于公开数字，编辑和普通读者未必总能识别，平台已经进入“默认存在 AI 协作”的阶段。"
+    ],
+    "why_it_matters": "这是中文互联网里一个很实在的 AI adoption 信号。讨论已经从“该不该用”滑向“用了多少、能不能识别、平台规则怎么跟上”。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

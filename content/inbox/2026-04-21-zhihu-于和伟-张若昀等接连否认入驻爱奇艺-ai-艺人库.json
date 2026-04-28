@@ -1,0 +1,22 @@
+{
+  "id": "2026-04-21-zhihu-于和伟-张若昀等接连否认入驻爱奇艺-ai-艺人库",
+  "date": "2026-04-21",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "于和伟、张若昀等接连否认入驻爱奇艺 AI 艺人库",
+  "original_url": "https://www.zhihu.com/question/2029619054642557288",
+  "heat": "57 万热度",
+  "original_language": "zh-CN",
+  "tags": [],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "代表性观点认为，争议核心已经不只是肖像权/授权书，而是平台是否试图先把“脸、声音、表演数据”平台化，再把议价权收回到自己手里。",
+      "高赞回答普遍质疑平台表述“先宣布、后澄清”，把这件事看成 AI 内容工业化里的典型信任危机。",
+      "另一个常见判断是，AI 真正挤压的会先是中腰部演员、群演和标准化生产岗位，头部演员反而更谨慎，因为授权 AI 等于稀释自身影响力。"
+    ],
+    "why_it_matters": "这是中文舆论对“AI + likeness rights + platform power”最直接的一类反应，能补足北美关于影视、媒体、训练数据、数字分身授权的同主题讨论。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

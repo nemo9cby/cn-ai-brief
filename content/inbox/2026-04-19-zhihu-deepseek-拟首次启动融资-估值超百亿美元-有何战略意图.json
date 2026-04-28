@@ -1,0 +1,26 @@
+{
+  "id": "2026-04-19-zhihu-deepseek-拟首次启动融资-估值超百亿美元-有何战略意图",
+  "date": "2026-04-19",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "DeepSeek 拟首次启动融资，估值超百亿美元，有何战略意图？",
+  "original_url": "https://www.zhihu.com/question/2028616808370849247",
+  "heat": "57 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "models",
+    "infra",
+    "markets"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "高赞观点集中在一点，DeepSeek 之前拒绝融资，不代表不缺钱，只是早期还能靠幻方量化自供血；现在训练、推理、抢人都更烧钱，外部融资更像被竞争强度倒逼。",
+      "一部分回答强调，真正的瓶颈不是 abstract 的“资本故事”，而是算力、HBM、数据中心和高端研究员留存，融资是补资源，不只是补现金。",
+      "也有不少回答质疑消息源可靠性，说明知乎讨论里对“外媒放风+一级市场叙事”保持戒心。"
+    ],
+    "why_it_matters": "这是中文舆论对中国 AI 头部公司进入资本化新阶段的直接反应，重点不在估值本身，而在“自研理想主义能否继续独立”这件事。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

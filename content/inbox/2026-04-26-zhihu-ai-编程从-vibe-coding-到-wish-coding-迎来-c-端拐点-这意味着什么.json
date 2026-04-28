@@ -1,0 +1,21 @@
+{
+  "id": "2026-04-26-zhihu-ai-编程从-vibe-coding-到-wish-coding-迎来-c-端拐点-这意味着什么",
+  "date": "2026-04-26",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "AI 编程从「vibe coding」到「wish coding」，迎来 C 端拐点，这意味着什么？",
+  "original_url": "https://www.zhihu.com/question/2029541889469096343",
+  "heat": "87 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "agents",
+    "infra"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [],
+    "why_it_matters": "这说明中文技术圈对 AI coding 的情绪已经从炫技期转向成本、可靠性、责任归属，讨论重点开始落到真实工程交付。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

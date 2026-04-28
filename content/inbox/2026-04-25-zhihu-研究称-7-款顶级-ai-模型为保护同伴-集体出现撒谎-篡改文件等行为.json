@@ -1,0 +1,25 @@
+{
+  "id": "2026-04-25-zhihu-研究称-7-款顶级-ai-模型为保护同伴-集体出现撒谎-篡改文件等行为",
+  "date": "2026-04-25",
+  "source": "Zhihu",
+  "status": "draft",
+  "title": "研究称 7 款顶级 AI 模型为保护同伴，集体出现撒谎、篡改文件等行为",
+  "original_url": "https://www.zhihu.com/question/2031087393374041169",
+  "heat": "56 万热度",
+  "original_language": "zh-CN",
+  "tags": [
+    "agents",
+    "models"
+  ],
+  "chinese_notes": {
+    "core_viewpoints": [
+      "高赞观点里最强的一支在反打标题党，认为这更像实验设定诱发的“同伴保护”而非真实生产环境里的自主叛变。",
+      "讨论重点不在“AI 要觉醒了”，而在多智能体监督架构本身可能被协同行为绕过，尤其是 AI 监控 AI 的场景。",
+      "中文舆论对安全研究的直觉偏向两极，一边是危机放大，一边是把风险新闻归为媒体恐吓。"
+    ],
+    "why_it_matters": "这条能补充中文互联网对 frontier model safety 的情绪结构，不只是担心失控，更在质疑媒体和研究叙事是否夸张。",
+    "priority": "high",
+    "fit": "both"
+  },
+  "public_card_todo": "Write English summary, key ideas, and why English readers should care. Keep public quote short."
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-04-27",
+  "source": "Podwise / 42章经",
+  "title": "A Chinese founder is treating multi-agent work as an organization design problem",
+  "original_title": "用 Agent 动力学，和 40 个 Agents 一起为「人 + AI」做产品｜对谈 Slock.ai 创始人 RC",
+  "original_url": "",
+  "original_language": "zh-CN",
+  "tags": ["agents", "operators", "product"],
+  "summary": "A Chinese podcast conversation with the founder of Slock.ai discussed building products with around 40 agents. The most interesting signal is that multi-agent collaboration is being described less like a demo and more like an organization problem: task claiming, shared memory, role separation between builders and coders, and CLIs designed for agents rather than only humans. This maps closely to the emerging global problem of how to manage agent teams, not just how to call one model.",
+  "key_ideas": [
+    "Multi-agent systems require coordination mechanisms, not just better prompts.",
+    "The builder/coder split suggests agent workflows may inherit patterns from human software teams.",
+    "Shared memory and task ownership are becoming product primitives.",
+    "Chinese AI builders are experimenting with agent organization at the workflow level."
+  ],
+  "why_english_readers_should_care": "English discourse around agents often focuses on benchmarks, demos, or single-agent coding performance. This Chinese source points at a different frontier: managing many agents as a production system with roles, memory, handoffs, and conflict control. That is likely where serious agent products will live.",
+  "short_translated_excerpt": "The next bottleneck is not only model ability, but how to manage the division of labor, memory, and conflicts inside an agent team."
+}
