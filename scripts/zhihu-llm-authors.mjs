@@ -7,7 +7,14 @@ const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, 'data');
 fs.mkdirSync(DATA_DIR, { recursive: true });
 
-const COLLECTION_ID = process.env.ZHIHU_LLM_COLLECTION_ID || '972493246';
+const COLLECTION_IDS = (process.env.ZHIHU_COLLECTION_IDS || process.env.ZHIHU_LLM_COLLECTION_ID || '972493246')
+  .split(',')
+  .map(s => s.trim())
+  .filter(Boolean);
+const COLLECTION_NAMES = {
+  '972493246': 'LLM',
+  '696851342': '我的收藏'
+};
 const CDP_PORT = process.env.OPENCLAW_CDP_PORT || '41628';
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36';
 
@@ -85,7 +92,7 @@ function authorOf(c) {
   };
 }
 
-async function fetchCollectionItems(cookie, collectionId = COLLECTION_ID) {
+async function fetchCollectionItems(cookie, collectionId) {
   const items = [];
   let offset = 0;
   const limit = 20;
@@ -98,6 +105,7 @@ async function fetchCollectionItems(cookie, collectionId = COLLECTION_ID) {
       if (!a.token) continue;
       items.push({
         collection_id: collectionId,
+        collection_title: COLLECTION_NAMES[collectionId] || collectionId,
         type: c.type,
         id: String(c.id || ''),
         title: contentTitle(c),
@@ -135,7 +143,7 @@ function buildWatchlist(items) {
     const w = map.get(key);
     w.saved_count += 1;
     w.total_saved_votes += Number(item.voteup_count || 0);
-    w.seed_items.push({ title: item.title, url: item.url, type: item.type, votes: item.voteup_count });
+    w.seed_items.push({ title: item.title, url: item.url, type: item.type, votes: item.voteup_count, collection: item.collection_title || item.collection_id });
   }
   return [...map.values()]
     .sort((a, b) => (b.saved_count - a.saved_count) || (b.total_saved_votes - a.total_saved_votes));
@@ -143,11 +151,16 @@ function buildWatchlist(items) {
 
 async function main() {
   const cookie = await getZhihuCookie();
-  const items = await fetchCollectionItems(cookie);
+  const items = [];
+  for (const collectionId of COLLECTION_IDS) {
+    const part = await fetchCollectionItems(cookie, collectionId);
+    console.log(`Fetched ${part.length} items from ${COLLECTION_NAMES[collectionId] || collectionId} (${collectionId})`);
+    items.push(...part);
+  }
   const watchlist = buildWatchlist(items);
   const out = {
-    collection_id: COLLECTION_ID,
-    collection_title: 'LLM',
+    collection_ids: COLLECTION_IDS,
+    collection_titles: COLLECTION_IDS.map(id => COLLECTION_NAMES[id] || id),
     generated_at: new Date().toISOString(),
     total_items: items.length,
     total_authors: watchlist.length,
