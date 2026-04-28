@@ -1,0 +1,18 @@
+{
+  "date": "2026-04-27",
+  "source": "Podwise / Lenny's Podcast",
+  "title": "Anthropic's product team is turning AI-native work into an operating model",
+  "original_title": "How Anthropic’s product team moves faster than anyone else | Cat Wu (Head of Product, Claude Code)",
+  "original_url": "",
+  "original_language": "en",
+  "tags": ["agents", "operators", "product"],
+  "summary": "Today's Podwise scan surfaced a Lenny's Podcast episode with Cat Wu, Head of Product for Claude Code. The key signal is organizational rather than purely technical: Anthropic appears to be replacing heavy PRD-driven product process with weekly shipping, strong product taste, and smaller high-quality eval loops. The boundary between product and engineering keeps getting thinner because frontier models are becoming part of how product teams define, test, and ship work.",
+  "key_ideas": [
+    "AI-native product organizations may rely more on fast eval loops than thick planning docs.",
+    "Product taste becomes more important when models can generate many plausible options quickly.",
+    "Claude Code is not only a developer tool story; it is also a window into how Anthropic itself builds products.",
+    "The product/engineering boundary is being compressed by agentic coding workflows."
+  ],
+  "why_english_readers_should_care": "Most coverage of Claude Code focuses on features or model capability. This source is useful because it points at the internal operating model behind the product: faster loops, smaller teams, and evals as product infrastructure. For builders, that may be the more transferable lesson.",
+  "short_translated_excerpt": "The signal is not a single workflow trick, but a frontier-model company reorganizing product work around shipping, taste, and eval loops."
+}

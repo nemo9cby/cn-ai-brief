@@ -1,0 +1,18 @@
+{
+  "date": "2026-04-27",
+  "source": "Podwise / Latent Space",
+  "title": "Shopify is treating agentic infrastructure as a platform moat",
+  "original_title": "Shopify’s AI Phase Transition: 2026 Usage Explosion, Unlimited Opus-4.6 Token Budget, Tangle, Tangent, SimGym — with Mikhail Parakhin, Shopify CTO",
+  "original_url": "",
+  "original_language": "en",
+  "tags": ["agents", "infra", "operators"],
+  "summary": "A Latent Space episode with Shopify CTO Mikhail Parakhin surfaced several strong infrastructure signals: unlimited frontier-token budgets, automated research loops, customer simulation, and content-based caching. The interesting part is not that Shopify is using models, but that it is systematizing agentic work into reusable internal infrastructure. That turns AI adoption from a collection of tools into something closer to an operating system for the company.",
+  "key_ideas": [
+    "Unlimited frontier-token budgets change how teams explore and automate internal work.",
+    "Customer simulation and auto-research loops suggest eval and product discovery are becoming infrastructure problems.",
+    "Content-based caching hints at cost control becoming a first-class design constraint for agent systems.",
+    "Large companies may build durable advantages by combining agents, internal data, and reusable workflow infra."
+  ],
+  "why_english_readers_should_care": "The easy story is that every company is adopting AI tools. The more important story is which companies turn agents, data, caching, simulation, and workflow memory into shared infrastructure. Shopify is a useful case study because it frames AI as a platform capability rather than scattered productivity hacks.",
+  "short_translated_excerpt": "The competition is moving from 'who has access to models' to who can turn agents, data, and infrastructure into a reusable operating system."
+}
