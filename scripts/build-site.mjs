@@ -7,8 +7,10 @@ const translationsDir = path.join(cwd, 'content', 'translations');
 const feedDir = path.join(cwd, 'content', 'feed');
 const publicDir = path.join(cwd, 'public');
 const translationPublicDir = path.join(publicDir, 'translations');
+const zhPublicDir = path.join(publicDir, 'zh');
 fs.mkdirSync(publicDir, { recursive: true });
 fs.mkdirSync(translationPublicDir, { recursive: true });
+fs.mkdirSync(zhPublicDir, { recursive: true });
 
 const publishableRights = new Set(['owned', 'licensed', 'permissioned', 'public_domain']);
 
@@ -84,20 +86,45 @@ function formatDateTime(iso, fallbackDate = '') {
   try { return new Intl.DateTimeFormat('en-CA', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'America/Toronto' }).format(new Date(iso)); } catch { return fallbackDate; }
 }
 
-function renderFeedItem(item) {
+function feedItemSlug(item) {
+  return String(item.id || `${item.platform || 'item'}-${item.type || ''}-${item.created_time || ''}`)
+    .toLowerCase()
+    .replace(/[^a-z0-9._-]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 120) || 'item';
+}
+
+function renderFeedItemEn(item) {
   const topics = [...(item.topics || []), ...(item.author_tags || [])].filter(Boolean);
+  const zhHref = `zh/${feedItemSlug(item)}.html`;
   return `<article class="card feed-item">
     <div class="meta"><span>${esc(formatDateTime(item.created_at, item.date || item.feed_date || ''))}</span><span>·</span><span>${esc(item.author?.name || '')}</span>${item.author_score ? `<span class="chip">score ${esc(item.author_score)}</span>` : ''}${topics.slice(0,4).map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div>
     <h2>${esc(item.en?.title || item.zh?.title || '')}</h2>
     ${item.en?.summary ? `<p class="en">${esc(item.en.summary)}</p>` : ''}
-    <div class="section-title">中文原文</div>
-    <p class="zh"><strong>${esc(item.zh?.title || '')}</strong></p>
-    ${item.zh?.excerpt ? `<p class="zh">${esc(item.zh.excerpt)}</p>` : ''}
     <div class="meta"><span>${esc(item.platform || item.source || '')}</span><span>${esc(item.type || '')}</span><span>${esc((item.metrics?.voteup_count ?? 0) + ' upvotes')}</span></div>
-    ${item.url ? `<p><a href="${esc(item.url)}">Original source</a></p>` : ''}
+    <p><a href="${esc(zhHref)}">View Chinese source card →</a>${item.url ? ` · <a href="${esc(item.url)}">Original source</a>` : ''}</p>
   </article>`;
 }
 
+function renderFeedItemZh(item, { standalone = false } = {}) {
+  const topics = [...(item.topics || []), ...(item.author_tags || [])].filter(Boolean);
+  const back = standalone ? '<p><a href="../feed.html">← English feed</a> · <a href="../feed-zh.html">中文瀑布流</a></p>' : '';
+  return `<article class="card feed-item">
+    <div class="meta"><span>${esc(formatDateTime(item.created_at, item.date || item.feed_date || ''))}</span><span>·</span><span>${esc(item.author?.name || '')}</span>${item.author_score ? `<span class="chip">score ${esc(item.author_score)}</span>` : ''}${topics.slice(0,4).map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div>
+    <h2>${esc(item.zh?.title || item.en?.title || '')}</h2>
+    ${item.zh?.excerpt ? `<p class="zh">${esc(item.zh.excerpt)}</p>` : ''}
+    <div class="section-title">English triage</div>
+    <p class="en"><strong>${esc(item.en?.title || '')}</strong></p>
+    ${item.en?.summary ? `<p class="en">${esc(item.en.summary)}</p>` : ''}
+    <div class="meta"><span>${esc(item.platform || item.source || '')}</span><span>${esc(item.type || '')}</span><span>${esc((item.metrics?.voteup_count ?? 0) + ' upvotes')}</span></div>
+    ${item.url ? `<p><a href="${esc(item.url)}">原文链接</a></p>` : ''}
+    ${back}
+  </article>`;
+}
+
+function renderChineseItemPage(item) {
+  return layout(`CN AI Brief - ${item.zh?.title || item.en?.title || ''}`, `<section class="hero"><div class="eyebrow">中文 Source Card</div><h1>${esc(item.zh?.title || '')}</h1><p class="subtitle">${esc(item.author?.name || '')} · ${esc(formatDateTime(item.created_at, item.date || item.feed_date || ''))}</p><nav class="nav"><a href="../feed.html">English feed</a><a href="../feed-zh.html">中文瀑布流</a></nav></section>${renderFeedItemZh(item, { standalone: true })}`);
+}
 function renderTranslation(t) {
   return layout(`CN AI Brief - ${t.title}`, `<section class="hero"><div class="eyebrow">Full Translation</div><h1>${esc(t.title)}</h1><p class="subtitle">${esc(t.source || '')}</p><p><a href="../index.html">← Home</a></p></section>
     <div class="notice">Published because rights status is marked as <strong>${esc(t.rights)}</strong>. Full translations should only be used for owned, licensed, permissioned, or public-domain material.</div>
@@ -116,17 +143,27 @@ for (const t of translations.values()) {
   }
 }
 
-const body = `<section class="hero"><div class="eyebrow">CN AI Brief</div><h1>Chinese AI signals, translated for global readers.</h1><p class="subtitle">A public source pool for English-speaking AI readers who want access to high-signal Chinese discussions on LLMs, agents, post-training, infrastructure, and operator lessons.</p><nav class="nav"><a href="feed.html">Author activity feed</a>${dates[0] ? `<a href="${dates[0]}.html">Latest daily brief</a>` : ''}</nav></section>
+const body = `<section class="hero"><div class="eyebrow">CN AI Brief</div><h1>Chinese AI signals, translated for global readers.</h1><p class="subtitle">A public source pool for English-speaking AI readers who want access to high-signal Chinese discussions on LLMs, agents, post-training, infrastructure, and operator lessons.</p><nav class="nav"><a href="feed.html">English author feed</a><a href="feed-zh.html">中文作者流</a>${dates[0] ? `<a href="${dates[0]}.html">Latest daily brief</a>` : ''}</nav></section>
   <p class="meta">${cards.length} published cards · ${feedItems.length} feed items · ${dates.length} daily pages · updated from curated newsroom sources</p>
   ${cards.map(c => renderCard(c, translations)).join('\n')}
   <div class="footer">Public cards use summaries, short excerpts, attribution, and original links. Full translation pages are only published for owned, licensed, permissioned, or public-domain material.</div>`;
 fs.writeFileSync(path.join(publicDir, 'index.html'), layout('CN AI Brief', body));
 
-const feedBody = `<section class="hero"><div class="eyebrow">Author Activity Feed</div><h1>All high-score author dynamics.</h1><p class="subtitle">A reverse-chronological bilingual waterfall of watched Zhihu authors. This is the raw intelligence layer: English triage plus Chinese original title and excerpt.</p><nav class="nav"><a href="index.html">Home</a></nav></section>
-  <p class="meta">${feedItems.length} items · sorted by source time · bilingual English/Chinese view</p>
-  <section class="feed-grid">${feedItems.map(renderFeedItem).join('\n')}</section>
-  <div class="footer">Feed items preserve original Chinese excerpts and add English triage summaries. Full third-party translations are not republished unless rights are clear.</div>`;
+for (const item of feedItems) {
+  fs.writeFileSync(path.join(zhPublicDir, `${feedItemSlug(item)}.html`), renderChineseItemPage(item));
+}
+
+const feedBody = `<section class="hero"><div class="eyebrow">Author Activity Feed</div><h1>High-score Chinese AI author dynamics.</h1><p class="subtitle">Reverse-chronological English triage for watched Zhihu authors. Each item links to a separate Chinese source card, so the English and Chinese reading experiences stay clean.</p><nav class="nav"><a href="index.html">Home</a><a href="feed-zh.html">中文作者流</a></nav></section>
+  <p class="meta">${feedItems.length} items · sorted by source time · English triage view</p>
+  <section class="feed-grid">${feedItems.map(renderFeedItemEn).join('\n')}</section>
+  <div class="footer">English feed items summarize and triage source dynamics. Click through to each Chinese source card for original title and excerpt.</div>`;
 fs.writeFileSync(path.join(publicDir, 'feed.html'), layout('CN AI Brief - Author Activity Feed', feedBody));
+
+const feedZhBody = `<section class="hero"><div class="eyebrow">中文作者流</div><h1>高分作者动态瀑布流</h1><p class="subtitle">按时间倒序展示知乎高分作者动态。这里保留中文原始标题和 excerpt，英文只作为辅助 triage。</p><nav class="nav"><a href="index.html">Home</a><a href="feed.html">English feed</a></nav></section>
+  <p class="meta">${feedItems.length} items · 按发布时间倒序</p>
+  <section class="feed-grid">${feedItems.map(item => renderFeedItemZh(item)).join('\n')}</section>
+  <div class="footer">中文页保留原始语境；英文 feed 链接到对应中文 source card。</div>`;
+fs.writeFileSync(path.join(publicDir, 'feed-zh.html'), layout('CN AI Brief - 中文作者流', feedZhBody));
 
 for (const date of dates) {
   const dayCards = cards.filter(c => c.date === date);
