@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CN AI Brief</title><style>
     :root{--bg:#0b1020;--card:#121a31;--text:#edf2ff;--muted:#9fb0d0;--line:#253150;--accent:#8bd3ff;--chip:#1d2947}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#08101f,#10162a);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);line-height:1.55}main{max-width:980px;margin:0 auto;padding:40px 20px 80px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}.hero{padding:36px 0 24px;border-bottom:1px solid var(--line);margin-bottom:24px}.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px}h1{font-size:44px;line-height:1.05;margin:10px 0 12px}.subtitle{font-size:18px;color:var(--muted);max-width:720px}.card{background:rgba(18,26,49,.86);border:1px solid var(--line);border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 10px 28px rgba(0,0,0,.18)}.meta{display:flex;flex-wrap:wrap;gap:8px;color:var(--muted);font-size:13px}.chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:3px 9px;color:#c8d6f5}.card h2{font-size:24px;margin:12px 0}.section-title{margin-top:18px;color:#d7e5ff;font-size:15px;text-transform:uppercase;letter-spacing:.04em}.quote{border-left:3px solid var(--accent);padding-left:14px;color:#cfe0ff}.footer{margin-top:40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:20px}.translation{white-space:pre-wrap;font-size:18px}.notice{background:#1e2a18;border:1px solid #4a6b38;color:#dff5cf;border-radius:14px;padding:14px;margin:18px 0}.muted{color:var(--muted)}ul{padding-left:20px}@media(max-width:640px){h1{font-size:34px}.card{padding:18px}}
   </style></head><body><main><section class="hero"><div class="eyebrow">CN AI Brief</div><h1>Chinese AI signals, translated for global readers.</h1><p class="subtitle">A public source pool for English-speaking AI readers who want access to high-signal Chinese discussions on LLMs, agents, post-training, infrastructure, and operator lessons.</p></section>
-  <p class="meta">6 published cards · 1 daily pages · updated from curated newsroom sources</p>
+  <p class="meta">11 published cards · 1 daily pages · updated from curated newsroom sources</p>
   <article class="card">
     <div class="meta"><span>2026-04-27</span><span>·</span><span>Podwise / Latent Space</span><span class="chip">agents</span><span class="chip">infra</span><span class="chip">operators</span></div>
     <h2>Shopify is treating agentic infrastructure as a platform moat</h2>
@@ -11,6 +11,16 @@
     <div class="section-title">Short translated excerpt</div><p class="quote">The competition is moving from &#39;who has access to models&#39; to who can turn agents, data, and infrastructure into a reusable operating system.</p>
     
     
+  </article>
+<article class="card">
+    <div class="meta"><span>2026-04-27</span><span>·</span><span>Zhihu / 0xC001</span><span class="chip">post-training</span><span class="chip">models</span><span class="chip">evals</span></div>
+    <h2>Chinese post-training notes are asking why reasoning SFT generalizes</h2>
+    <p>Another item from the Zhihu LLM author watchlist summarizes work on reasoning SFT generalization. The core question is not whether SFT can improve reasoning on a benchmark, but which hidden variables determine whether that improvement transfers. The article points to optimization, data, and model capability as interacting conditions rather than treating supervised reasoning traces as a universally reliable recipe.</p>
+    <div class="section-title">Key ideas</div><ul><li>Reasoning SFT generalization depends on conditional factors, not only dataset size.</li><li>Optimization, data quality, and base-model capability interact in non-obvious ways.</li><li>Chinese post-training summaries are moving beyond recipe-level advice toward failure conditions.</li><li>This line of work matters for teams trying to decide when SFT is enough and when RL is needed.</li></ul>
+    <div class="section-title">Why English readers should care</div><p>Many teams still talk about reasoning SFT as if better traces automatically create better reasoning. This Chinese source highlights a more useful framing: SFT works under specific conditions, and understanding those conditions is part of the engineering problem.</p>
+    <div class="section-title">Short translated excerpt</div><p class="quote">The question is not simply whether reasoning SFT helps, but under what optimization, data, and model-capability conditions it generalizes.</p>
+    
+    <p><a href="http://zhuanlan.zhihu.com/p/2026442713378174652">Original source</a></p>
   </article>
 <article class="card">
     <div class="meta"><span>2026-04-27</span><span>·</span><span>Zhihu</span><span class="chip">markets</span><span class="chip">models</span><span class="chip">operators</span></div>
@@ -43,6 +53,16 @@
     <p><a href="https://www.zhihu.com/question/2030445160417510538">Original source</a></p>
   </article>
 <article class="card">
+    <div class="meta"><span>2026-04-27</span><span>·</span><span>Zhihu / 0xC001</span><span class="chip">agents</span><span class="chip">post-training</span><span class="chip">models</span></div>
+    <h2>Chinese AI notes are tracking environment synthesis as the next agent-training bottleneck</h2>
+    <p>0xC001 highlighted Agent-World, a paper from Renmin University and ByteDance Seed on scaling real-world environment synthesis for general agent intelligence. The Chinese summary frames the key issue as co-evolution: agent policies need better environments, and synthetic environments need to evolve alongside the agents trained inside them. This is a more concrete version of the agent-training debate than generic claims about autonomous agents.</p>
+    <div class="section-title">Key ideas</div><ul><li>Agent capability may be limited by the quality and diversity of training environments.</li><li>Environment synthesis is becoming a post-training primitive for agents.</li><li>The co-evolution framing links policy improvement with environment generation.</li><li>Chinese AI readers are following ByteDance Seed&#39;s agent-training work closely.</li></ul>
+    <div class="section-title">Why English readers should care</div><p>A lot of English agent discourse still focuses on tools and product demos. This source points at the training side: better agents may require scalable environments, curriculum design, and feedback loops. That is exactly where frontier labs and serious open-source teams are likely to compete next.</p>
+    <div class="section-title">Short translated excerpt</div><p class="quote">Agent policy and training environments may have to evolve together, rather than treating the environment as a fixed benchmark.</p>
+    
+    <p><a href="http://zhuanlan.zhihu.com/p/2030064977009189949">Original source</a></p>
+  </article>
+<article class="card">
     <div class="meta"><span>2026-04-27</span><span>·</span><span>Podwise / Lenny&#39;s Podcast</span><span class="chip">agents</span><span class="chip">operators</span><span class="chip">product</span></div>
     <h2>Anthropic&#39;s product team is turning AI-native work into an operating model</h2>
     <p>Today&#39;s Podwise scan surfaced a Lenny&#39;s Podcast episode with Cat Wu, Head of Product for Claude Code. The key signal is organizational rather than purely technical: Anthropic appears to be replacing heavy PRD-driven product process with weekly shipping, strong product taste, and smaller high-quality eval loops. The boundary between product and engineering keeps getting thinner because frontier models are becoming part of how product teams define, test, and ship work.</p>
@@ -51,6 +71,36 @@
     <div class="section-title">Short translated excerpt</div><p class="quote">The signal is not a single workflow trick, but a frontier-model company reorganizing product work around shipping, taste, and eval loops.</p>
     
     
+  </article>
+<article class="card">
+    <div class="meta"><span>2026-04-27</span><span>·</span><span>Zhihu / 0xC001</span><span class="chip">post-training</span><span class="chip">models</span><span class="chip">evals</span></div>
+    <h2>A Chinese post-training digest focuses on repeated-error loops in RL</h2>
+    <p>This Zhihu article summarizes a paper on Memory-Enhanced Dynamic Reward Shaping, a framework for reducing repeated failure patterns during reinforcement learning. The key practical issue is familiar to anyone doing post-training: models can get stuck in recurring error modes when scalar rewards fail to carry enough memory of past mistakes. The Chinese discussion is valuable because it turns a research paper into a concrete post-training failure mode: how to stop RL from rehearsing its own bad habits.</p>
+    <div class="section-title">Key ideas</div><ul><li>Repeated errors during RL are a training-dynamics problem, not just an evaluation artifact.</li><li>Reward design may need memory of past failures to guide future exploration.</li><li>Dynamic reward shaping is being discussed as a way to make verifiable-reward RL less brittle.</li><li>Chinese post-training readers are tracking fine-grained RL failure modes beyond headline benchmark gains.</li></ul>
+    <div class="section-title">Why English readers should care</div><p>Post-training discourse in English often centers on GRPO, verifiable rewards, and benchmark improvements. This item is useful because it focuses on a subtler engineering problem: reward loops that keep reinforcing repeated mistakes. That is the kind of issue that matters when RL moves from toy tasks to long-horizon agents.</p>
+    <div class="section-title">Short translated excerpt</div><p class="quote">The past is not past: reinforcement learning can repeat the same mistakes unless the reward process remembers them.</p>
+    
+    <p><a href="http://zhuanlan.zhihu.com/p/2027529862101902857">Original source</a></p>
+  </article>
+<article class="card">
+    <div class="meta"><span>2026-04-27</span><span>·</span><span>Zhihu / ybq</span><span class="chip">agents</span><span class="chip">operators</span><span class="chip">product</span></div>
+    <h2>A Chinese NLP engineer argues that learning to use agents is now the highest-leverage technical habit</h2>
+    <p>A Chinese NLP engineer writes that at this moment, few things feel more important than learning how to use agents well. The piece is less about hype and more about professional adaptation: older programmers, NLP engineers, and tool users need to learn Claude Code-style workflows because agent use is becoming a basic technical habit. This is exactly the kind of practitioner signal that a hot-list scan misses.</p>
+    <div class="section-title">Key ideas</div><ul><li>Agent usage is being framed as a practical career skill, not only a product category.</li><li>The author explicitly connects agent adoption with experienced programmers needing to adapt their workflow.</li><li>Claude Code-style hands-on usage is spreading through peer learning rather than only official tutorials.</li><li>Chinese technical communities are starting to normalize agents as everyday engineering leverage.</li></ul>
+    <div class="section-title">Why English readers should care</div><p>English AI Twitter often hears about agent adoption from startups and tool vendors. This source is useful because it shows adoption from the practitioner side: engineers teaching each other to work differently. That is a stronger signal than another launch announcement.</p>
+    <div class="section-title">Short translated excerpt</div><p class="quote">At this moment, I cannot think of many things more important than learning how to use agents better.</p>
+    
+    <p><a href="http://zhuanlan.zhihu.com/p/2025676117307138196">Original source</a></p>
+  </article>
+<article class="card">
+    <div class="meta"><span>2026-04-27</span><span>·</span><span>Zhihu / 0xC001</span><span class="chip">models</span><span class="chip">infra</span><span class="chip">post-training</span></div>
+    <h2>A Chinese ML curator reads DeepSeek-V4 as a million-token efficiency story</h2>
+    <p>This item comes from Nemo&#39;s Zhihu LLM author watchlist, not the general hot list. 0xC001 summarizes the DeepSeek-V4 technical report around a practical question: how to make million-token context useful and efficient rather than only impressive as a headline. The early signal is that Chinese technical discussion is treating long context as an engineering system problem involving architecture, inference cost, retrieval-like behavior, and evaluation, not just a bigger number in the model card.</p>
+    <div class="section-title">Key ideas</div><ul><li>DeepSeek-V4 is being discussed through the lens of efficient million-token context intelligence.</li><li>The useful question is whether long context can remain economical and reliable in real workloads.</li><li>Chinese ML curators are quickly translating model reports into implementation-oriented takeaways.</li><li>Long-context capability is becoming an infrastructure and evaluation problem, not only a benchmark claim.</li></ul>
+    <div class="section-title">Why English readers should care</div><p>English readers often see Chinese model releases as leaderboard events. This source is valuable because it captures the Chinese technical layer immediately downstream of the release: people asking what the design means for cost, context use, and real deployment.</p>
+    <div class="section-title">Short translated excerpt</div><p class="quote">The point is not merely that the model supports a million-token context, but whether that context can become efficient intelligence.</p>
+    
+    <p><a href="http://zhuanlan.zhihu.com/p/2031507181812585811">Original source</a></p>
   </article>
 <article class="card">
     <div class="meta"><span>2026-04-27</span><span>·</span><span>Podwise / 42章经</span><span class="chip">agents</span><span class="chip">operators</span><span class="chip">product</span></div>

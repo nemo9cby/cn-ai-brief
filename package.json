@@ -6,6 +6,8 @@
   "scripts": {
     "ingest": "node scripts/ingest-newsroom.mjs",
     "build": "node scripts/build-site.mjs",
-    "dev": "npm run ingest && npm run build"
+    "dev": "npm run ingest && npm run build",
+    "zhihu:authors": "node scripts/zhihu-llm-authors.mjs",
+    "zhihu:monitor": "node scripts/zhihu-author-monitor.mjs"
   }
 }

@@ -1,0 +1,18 @@
+{
+  "date": "2026-04-27",
+  "source": "Zhihu / 0xC001",
+  "title": "Chinese AI notes are tracking environment synthesis as the next agent-training bottleneck",
+  "original_title": "人大 & 字节 Seed 提出 Agent-World：实现 Agent 策略与训练环境的协同进化",
+  "original_url": "http://zhuanlan.zhihu.com/p/2030064977009189949",
+  "original_language": "zh-CN",
+  "tags": ["agents", "post-training", "models"],
+  "summary": "0xC001 highlighted Agent-World, a paper from Renmin University and ByteDance Seed on scaling real-world environment synthesis for general agent intelligence. The Chinese summary frames the key issue as co-evolution: agent policies need better environments, and synthetic environments need to evolve alongside the agents trained inside them. This is a more concrete version of the agent-training debate than generic claims about autonomous agents.",
+  "key_ideas": [
+    "Agent capability may be limited by the quality and diversity of training environments.",
+    "Environment synthesis is becoming a post-training primitive for agents.",
+    "The co-evolution framing links policy improvement with environment generation.",
+    "Chinese AI readers are following ByteDance Seed's agent-training work closely."
+  ],
+  "why_english_readers_should_care": "A lot of English agent discourse still focuses on tools and product demos. This source points at the training side: better agents may require scalable environments, curriculum design, and feedback loops. That is exactly where frontier labs and serious open-source teams are likely to compete next.",
+  "short_translated_excerpt": "Agent policy and training environments may have to evolve together, rather than treating the environment as a fixed benchmark."
+}

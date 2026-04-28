@@ -1,0 +1,18 @@
+{
+  "date": "2026-04-27",
+  "source": "Zhihu / 0xC001",
+  "title": "Chinese post-training notes are asking why reasoning SFT generalizes",
+  "original_title": "大模型后训练再思考：决定推理SFT泛化能力的三个隐藏变量",
+  "original_url": "http://zhuanlan.zhihu.com/p/2026442713378174652",
+  "original_language": "zh-CN",
+  "tags": ["post-training", "models", "evals"],
+  "summary": "Another item from the Zhihu LLM author watchlist summarizes work on reasoning SFT generalization. The core question is not whether SFT can improve reasoning on a benchmark, but which hidden variables determine whether that improvement transfers. The article points to optimization, data, and model capability as interacting conditions rather than treating supervised reasoning traces as a universally reliable recipe.",
+  "key_ideas": [
+    "Reasoning SFT generalization depends on conditional factors, not only dataset size.",
+    "Optimization, data quality, and base-model capability interact in non-obvious ways.",
+    "Chinese post-training summaries are moving beyond recipe-level advice toward failure conditions.",
+    "This line of work matters for teams trying to decide when SFT is enough and when RL is needed."
+  ],
+  "why_english_readers_should_care": "Many teams still talk about reasoning SFT as if better traces automatically create better reasoning. This Chinese source highlights a more useful framing: SFT works under specific conditions, and understanding those conditions is part of the engineering problem.",
+  "short_translated_excerpt": "The question is not simply whether reasoning SFT helps, but under what optimization, data, and model-capability conditions it generalizes."
+}

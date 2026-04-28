@@ -1,0 +1,18 @@
+{
+  "date": "2026-04-27",
+  "source": "Zhihu / ybq",
+  "title": "A Chinese NLP engineer argues that learning to use agents is now the highest-leverage technical habit",
+  "original_title": "拥抱 agent",
+  "original_url": "http://zhuanlan.zhihu.com/p/2025676117307138196",
+  "original_language": "zh-CN",
+  "tags": ["agents", "operators", "product"],
+  "summary": "A Chinese NLP engineer writes that at this moment, few things feel more important than learning how to use agents well. The piece is less about hype and more about professional adaptation: older programmers, NLP engineers, and tool users need to learn Claude Code-style workflows because agent use is becoming a basic technical habit. This is exactly the kind of practitioner signal that a hot-list scan misses.",
+  "key_ideas": [
+    "Agent usage is being framed as a practical career skill, not only a product category.",
+    "The author explicitly connects agent adoption with experienced programmers needing to adapt their workflow.",
+    "Claude Code-style hands-on usage is spreading through peer learning rather than only official tutorials.",
+    "Chinese technical communities are starting to normalize agents as everyday engineering leverage."
+  ],
+  "why_english_readers_should_care": "English AI Twitter often hears about agent adoption from startups and tool vendors. This source is useful because it shows adoption from the practitioner side: engineers teaching each other to work differently. That is a stronger signal than another launch announcement.",
+  "short_translated_excerpt": "At this moment, I cannot think of many things more important than learning how to use agents better."
+}

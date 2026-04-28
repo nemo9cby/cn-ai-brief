@@ -1,0 +1,18 @@
+{
+  "date": "2026-04-27",
+  "source": "Zhihu / 0xC001",
+  "title": "A Chinese ML curator reads DeepSeek-V4 as a million-token efficiency story",
+  "original_title": "DeepSeek-V4 技术报告解读",
+  "original_url": "http://zhuanlan.zhihu.com/p/2031507181812585811",
+  "original_language": "zh-CN",
+  "tags": ["models", "infra", "post-training"],
+  "summary": "This item comes from Nemo's Zhihu LLM author watchlist, not the general hot list. 0xC001 summarizes the DeepSeek-V4 technical report around a practical question: how to make million-token context useful and efficient rather than only impressive as a headline. The early signal is that Chinese technical discussion is treating long context as an engineering system problem involving architecture, inference cost, retrieval-like behavior, and evaluation, not just a bigger number in the model card.",
+  "key_ideas": [
+    "DeepSeek-V4 is being discussed through the lens of efficient million-token context intelligence.",
+    "The useful question is whether long context can remain economical and reliable in real workloads.",
+    "Chinese ML curators are quickly translating model reports into implementation-oriented takeaways.",
+    "Long-context capability is becoming an infrastructure and evaluation problem, not only a benchmark claim."
+  ],
+  "why_english_readers_should_care": "English readers often see Chinese model releases as leaderboard events. This source is valuable because it captures the Chinese technical layer immediately downstream of the release: people asking what the design means for cost, context use, and real deployment.",
+  "short_translated_excerpt": "The point is not merely that the model supports a million-token context, but whether that context can become efficient intelligence."
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-04-27",
+  "source": "Zhihu / 0xC001",
+  "title": "A Chinese post-training digest focuses on repeated-error loops in RL",
+  "original_title": "如何抑制大模型强化学习中的重复错误？MEDS 动态奖励框架解读",
+  "original_url": "http://zhuanlan.zhihu.com/p/2027529862101902857",
+  "original_language": "zh-CN",
+  "tags": ["post-training", "models", "evals"],
+  "summary": "This Zhihu article summarizes a paper on Memory-Enhanced Dynamic Reward Shaping, a framework for reducing repeated failure patterns during reinforcement learning. The key practical issue is familiar to anyone doing post-training: models can get stuck in recurring error modes when scalar rewards fail to carry enough memory of past mistakes. The Chinese discussion is valuable because it turns a research paper into a concrete post-training failure mode: how to stop RL from rehearsing its own bad habits.",
+  "key_ideas": [
+    "Repeated errors during RL are a training-dynamics problem, not just an evaluation artifact.",
+    "Reward design may need memory of past failures to guide future exploration.",
+    "Dynamic reward shaping is being discussed as a way to make verifiable-reward RL less brittle.",
+    "Chinese post-training readers are tracking fine-grained RL failure modes beyond headline benchmark gains."
+  ],
+  "why_english_readers_should_care": "Post-training discourse in English often centers on GRPO, verifiable rewards, and benchmark improvements. This item is useful because it focuses on a subtler engineering problem: reward loops that keep reinforcing repeated mistakes. That is the kind of issue that matters when RL moves from toy tasks to long-horizon agents.",
+  "short_translated_excerpt": "The past is not past: reinforcement learning can repeat the same mistakes unless the reward process remembers them."
+}
