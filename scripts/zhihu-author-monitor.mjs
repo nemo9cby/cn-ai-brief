@@ -116,7 +116,9 @@ async function fetchAuthorItems(cookie, author) {
 }
 
 function loadWatchlist() {
-  const p = path.join(DATA_DIR, 'zhihu-llm-watchlist.json');
+  const scoredPath = path.join(DATA_DIR, 'zhihu-llm-watchlist-scored.json');
+  const rawPath = path.join(DATA_DIR, 'zhihu-llm-watchlist.json');
+  const p = fs.existsSync(scoredPath) ? scoredPath : rawPath;
   if (!fs.existsSync(p)) throw new Error('Missing data/zhihu-llm-watchlist.json. Run npm run zhihu:authors first.');
   return JSON.parse(fs.readFileSync(p, 'utf8')).authors || [];
 }

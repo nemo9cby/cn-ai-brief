@@ -8,6 +8,7 @@
     "build": "node scripts/build-site.mjs",
     "dev": "npm run ingest && npm run build",
     "zhihu:authors": "node scripts/zhihu-llm-authors.mjs",
+    "zhihu:score": "node scripts/zhihu-score-authors.mjs",
     "zhihu:monitor": "node scripts/zhihu-author-monitor.mjs"
   }
 }
