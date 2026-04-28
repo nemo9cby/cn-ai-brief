@@ -4,6 +4,7 @@ import path from 'node:path';
 const cwd = process.cwd();
 const cardsDir = path.join(cwd, 'content', 'cards');
 const translationsDir = path.join(cwd, 'content', 'translations');
+const feedDir = path.join(cwd, 'content', 'feed');
 const publicDir = path.join(cwd, 'public');
 const translationPublicDir = path.join(publicDir, 'translations');
 fs.mkdirSync(publicDir, { recursive: true });
@@ -34,6 +35,12 @@ function readCards() {
     .sort((a,b) => `${b.date} ${b.title}`.localeCompare(`${a.date} ${a.title}`));
 }
 
+function readFeeds() {
+  return readJsonDir(feedDir)
+    .flatMap(x => (x.data.items || []).map(item => ({ ...item, feed_date: x.data.date })))
+    .sort((a, b) => (b.created_time || 0) - (a.created_time || 0));
+}
+
 function readTranslations() {
   const map = new Map();
   for (const { file, data } of readJsonDir(translationsDir)) {
@@ -47,7 +54,7 @@ function readTranslations() {
 
 function layout(title, body) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><style>
-    :root{--bg:#0b1020;--card:#121a31;--text:#edf2ff;--muted:#9fb0d0;--line:#253150;--accent:#8bd3ff;--chip:#1d2947}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#08101f,#10162a);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);line-height:1.55}main{max-width:980px;margin:0 auto;padding:40px 20px 80px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}.hero{padding:36px 0 24px;border-bottom:1px solid var(--line);margin-bottom:24px}.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px}h1{font-size:44px;line-height:1.05;margin:10px 0 12px}.subtitle{font-size:18px;color:var(--muted);max-width:720px}.card{background:rgba(18,26,49,.86);border:1px solid var(--line);border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 10px 28px rgba(0,0,0,.18)}.meta{display:flex;flex-wrap:wrap;gap:8px;color:var(--muted);font-size:13px}.chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:3px 9px;color:#c8d6f5}.card h2{font-size:24px;margin:12px 0}.section-title{margin-top:18px;color:#d7e5ff;font-size:15px;text-transform:uppercase;letter-spacing:.04em}.quote{border-left:3px solid var(--accent);padding-left:14px;color:#cfe0ff}.footer{margin-top:40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:20px}.translation{white-space:pre-wrap;font-size:18px}.notice{background:#1e2a18;border:1px solid #4a6b38;color:#dff5cf;border-radius:14px;padding:14px;margin:18px 0}.muted{color:var(--muted)}ul{padding-left:20px}@media(max-width:640px){h1{font-size:34px}.card{padding:18px}}
+    :root{--bg:#0b1020;--card:#121a31;--text:#edf2ff;--muted:#9fb0d0;--line:#253150;--accent:#8bd3ff;--chip:#1d2947}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#08101f,#10162a);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);line-height:1.55}main{max-width:1080px;margin:0 auto;padding:40px 20px 80px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}.hero{padding:36px 0 24px;border-bottom:1px solid var(--line);margin-bottom:24px}.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px}h1{font-size:44px;line-height:1.05;margin:10px 0 12px}.subtitle{font-size:18px;color:var(--muted);max-width:760px}.nav{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}.nav a{border:1px solid var(--line);background:rgba(29,41,71,.7);border-radius:999px;padding:7px 12px}.card{background:rgba(18,26,49,.86);border:1px solid var(--line);border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 10px 28px rgba(0,0,0,.18)}.feed-grid{columns:2 420px;column-gap:18px}.feed-item{break-inside:avoid;margin:0 0 18px}.meta{display:flex;flex-wrap:wrap;gap:8px;color:var(--muted);font-size:13px}.chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:3px 9px;color:#c8d6f5}.card h2{font-size:24px;margin:12px 0}.feed-item h2{font-size:20px}.zh{font-size:15px;color:#f3f6ff}.en{color:#dce8ff}.section-title{margin-top:18px;color:#d7e5ff;font-size:15px;text-transform:uppercase;letter-spacing:.04em}.quote{border-left:3px solid var(--accent);padding-left:14px;color:#cfe0ff}.footer{margin-top:40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:20px}.translation{white-space:pre-wrap;font-size:18px}.notice{background:#1e2a18;border:1px solid #4a6b38;color:#dff5cf;border-radius:14px;padding:14px;margin:18px 0}.muted{color:var(--muted)}ul{padding-left:20px}@media(max-width:640px){h1{font-size:34px}.card{padding:18px}}
   </style></head><body><main>${body}</main></body></html>`;
 }
 
@@ -72,6 +79,25 @@ function renderCard(c, translations) {
   </article>`;
 }
 
+function formatDateTime(iso, fallbackDate = '') {
+  if (!iso) return fallbackDate;
+  try { return new Intl.DateTimeFormat('en-CA', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'America/Toronto' }).format(new Date(iso)); } catch { return fallbackDate; }
+}
+
+function renderFeedItem(item) {
+  const topics = [...(item.topics || []), ...(item.author_tags || [])].filter(Boolean);
+  return `<article class="card feed-item">
+    <div class="meta"><span>${esc(formatDateTime(item.created_at, item.date || item.feed_date || ''))}</span><span>·</span><span>${esc(item.author?.name || '')}</span>${item.author_score ? `<span class="chip">score ${esc(item.author_score)}</span>` : ''}${topics.slice(0,4).map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div>
+    <h2>${esc(item.en?.title || item.zh?.title || '')}</h2>
+    ${item.en?.summary ? `<p class="en">${esc(item.en.summary)}</p>` : ''}
+    <div class="section-title">中文原文</div>
+    <p class="zh"><strong>${esc(item.zh?.title || '')}</strong></p>
+    ${item.zh?.excerpt ? `<p class="zh">${esc(item.zh.excerpt)}</p>` : ''}
+    <div class="meta"><span>${esc(item.platform || item.source || '')}</span><span>${esc(item.type || '')}</span><span>${esc((item.metrics?.voteup_count ?? 0) + ' upvotes')}</span></div>
+    ${item.url ? `<p><a href="${esc(item.url)}">Original source</a></p>` : ''}
+  </article>`;
+}
+
 function renderTranslation(t) {
   return layout(`CN AI Brief - ${t.title}`, `<section class="hero"><div class="eyebrow">Full Translation</div><h1>${esc(t.title)}</h1><p class="subtitle">${esc(t.source || '')}</p><p><a href="../index.html">← Home</a></p></section>
     <div class="notice">Published because rights status is marked as <strong>${esc(t.rights)}</strong>. Full translations should only be used for owned, licensed, permissioned, or public-domain material.</div>
@@ -81,6 +107,7 @@ function renderTranslation(t) {
 
 const cards = readCards();
 const translations = readTranslations();
+const feedItems = readFeeds();
 const dates = [...new Set(cards.map(c => c.date))];
 
 for (const t of translations.values()) {
@@ -89,13 +116,20 @@ for (const t of translations.values()) {
   }
 }
 
-const body = `<section class="hero"><div class="eyebrow">CN AI Brief</div><h1>Chinese AI signals, translated for global readers.</h1><p class="subtitle">A public source pool for English-speaking AI readers who want access to high-signal Chinese discussions on LLMs, agents, post-training, infrastructure, and operator lessons.</p></section>
-  <p class="meta">${cards.length} published cards · ${dates.length} daily pages · updated from curated newsroom sources</p>
+const body = `<section class="hero"><div class="eyebrow">CN AI Brief</div><h1>Chinese AI signals, translated for global readers.</h1><p class="subtitle">A public source pool for English-speaking AI readers who want access to high-signal Chinese discussions on LLMs, agents, post-training, infrastructure, and operator lessons.</p><nav class="nav"><a href="feed.html">Author activity feed</a>${dates[0] ? `<a href="${dates[0]}.html">Latest daily brief</a>` : ''}</nav></section>
+  <p class="meta">${cards.length} published cards · ${feedItems.length} feed items · ${dates.length} daily pages · updated from curated newsroom sources</p>
   ${cards.map(c => renderCard(c, translations)).join('\n')}
   <div class="footer">Public cards use summaries, short excerpts, attribution, and original links. Full translation pages are only published for owned, licensed, permissioned, or public-domain material.</div>`;
 fs.writeFileSync(path.join(publicDir, 'index.html'), layout('CN AI Brief', body));
+
+const feedBody = `<section class="hero"><div class="eyebrow">Author Activity Feed</div><h1>All high-score author dynamics.</h1><p class="subtitle">A reverse-chronological bilingual waterfall of watched Zhihu authors. This is the raw intelligence layer: English triage plus Chinese original title and excerpt.</p><nav class="nav"><a href="index.html">Home</a></nav></section>
+  <p class="meta">${feedItems.length} items · sorted by source time · bilingual English/Chinese view</p>
+  <section class="feed-grid">${feedItems.map(renderFeedItem).join('\n')}</section>
+  <div class="footer">Feed items preserve original Chinese excerpts and add English triage summaries. Full third-party translations are not republished unless rights are clear.</div>`;
+fs.writeFileSync(path.join(publicDir, 'feed.html'), layout('CN AI Brief - Author Activity Feed', feedBody));
+
 for (const date of dates) {
   const dayCards = cards.filter(c => c.date === date);
   fs.writeFileSync(path.join(publicDir, `${date}.html`), layout(`CN AI Brief - ${date}`, `<section class="hero"><div class="eyebrow">Daily Brief</div><h1>${date}</h1><p class="subtitle">Translated Chinese AI source cards.</p><p><a href="index.html">← Home</a></p></section>${dayCards.map(c => renderCard(c, translations)).join('\n')}`));
 }
-console.log(`Built ${cards.length} cards and ${[...translations.values()].filter(t => publishableRights.has(t.rights)).length} translation pages into ${publicDir}`);
+console.log(`Built ${cards.length} cards, ${feedItems.length} feed items, and ${[...translations.values()].filter(t => publishableRights.has(t.rights)).length} translation pages into ${publicDir}`);
